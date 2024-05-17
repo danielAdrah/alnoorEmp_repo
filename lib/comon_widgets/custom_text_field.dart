@@ -5,8 +5,12 @@ import '../theme.dart';
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final TextInputType? keyboardType;
-
-  const CustomTextField({super.key, required this.hintText,required this.keyboardType});
+  final TextEditingController controller;
+  const CustomTextField(
+      {super.key,
+      required this.hintText,
+      required this.keyboardType,
+      required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +21,10 @@ class CustomTextField extends StatelessWidget {
       child: Container(
         height: 50,
         child: TextField(
+          textAlign: TextAlign.end,
+          controller: controller,
           keyboardType: keyboardType,
           decoration: InputDecoration(
-            
             hintText: hintText,
             hintStyle: TextStyle(color: Colors.black.withOpacity(0.3)),
             hintTextDirection: TextDirection.rtl,

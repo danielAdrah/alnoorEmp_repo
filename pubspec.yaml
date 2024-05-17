@@ -39,6 +39,8 @@ dependencies:
   animate_do: ^3.3.4
   intl_phone_field: ^3.2.0
   pin_code_text_field: ^1.8.0
+  dio: ^5.4.3+1
+  get_storage: ^2.1.1
 
 dev_dependencies:
   flutter_test:

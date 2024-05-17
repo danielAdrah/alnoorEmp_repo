@@ -2,19 +2,21 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:get_storage/get_storage.dart';
 import '../notification_/views/notification.dart';
 import '../theme.dart';
 
 class CustomAppBar extends StatefulWidget {
   final String title;
-  final String name;
-  const CustomAppBar({super.key, required this.title, required this.name});
+  const CustomAppBar({super.key, required this.title});
 
   @override
   State<CustomAppBar> createState() => _CustomAppBarState();
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
+  final GetStorage storage = GetStorage();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +41,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                     widget.title,
                   ),
                   Text(
-                    widget.name,
+                    "${storage.read("userName")}",
                     style: const TextStyle(color: TColor.primary),
                   ), //in this text it will be the TextController from the textfield
                 ],

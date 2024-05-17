@@ -22,13 +22,13 @@ class _EmployeeTaskState extends State<EmployeeTask> {
       initialIndex: 2,
       length: 3,
       child: Scaffold(
-        floatingActionButton:const CustomFloatingButton(),
+        floatingActionButton: const CustomFloatingButton(),
         body: SafeArea(
           child: Column(
             children: [
               const Padding(
                 padding: EdgeInsets.all(8.0),
-                child: CustomAppBar(title: "", name: ""),
+                child: CustomAppBar(title: "حياك لله أخي الكريم"),
               ),
               const SizedBox(height: 5),
               TabBar(
@@ -65,7 +65,8 @@ class _EmployeeTaskState extends State<EmployeeTask> {
                       delay: const Duration(milliseconds: 800),
                       child: const InProgressTask()),
                   FadeInRight(
-                      delay: const Duration(milliseconds: 800), child: const InPlaceTask()),
+                      delay: const Duration(milliseconds: 800),
+                      child: const InPlaceTask()),
                 ]),
               ),
             ],
